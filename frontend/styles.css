@@ -15,6 +15,7 @@
   align-items: center;
   margin: 0 auto;
   height: 100%;
+  padding-top: 1vh;
 }
 
 body {
@@ -25,9 +26,14 @@ body {
   height: 100vh;
 }
 
+#name {
+  margin-bottom: 0;
+}
+
 h1 {
   color: var(--light-primary);
   text-align: center;
+  font-size: 5vw;
 }
 
 p,
