@@ -1,13 +1,11 @@
 import React from "react";
 
-class App extends React.Component {
-  render() {
-    return (
-      <>
-        <h1>Hello world</h1>
-      </>
-    );
-  }
-}
+const App = () => {
+  return (
+    <div id="root">
+      <h1>Bryce Champaign</h1>
+    </div>
+  );
+};
 
 export default App;
