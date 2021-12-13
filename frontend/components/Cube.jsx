@@ -63,8 +63,8 @@ const CubeCanvas = () => {
   return (
     <div
       className="cube-scene"
-      onMouseDown={() => setIsClickingDown(true)}
-      onMouseUp={() => setIsClickingDown(false)}
+      onPointerDown={() => setIsClickingDown(true)}
+      onPointerUp={() => setIsClickingDown(false)}
     >
       <Canvas>
         <CameraControls />
