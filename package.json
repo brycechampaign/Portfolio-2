@@ -7,8 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "snowpack dev",
     "build": "snowpack build",
-    "start:dev": "nodemon src/server/index.js",
-    "build:dev": "webpack -d --watch",
     "snowpack": "snowpack"
   },
   "repository": {
