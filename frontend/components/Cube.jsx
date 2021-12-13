@@ -23,12 +23,14 @@ const Cube = (props) => {
   return (
     <mesh {...props} ref={ref} scale={3}>
       <boxGeometry args={[1, 1, 1]} />
+
+      <meshStandardMaterial attachArray="material" map={faceRight} />
+      <meshStandardMaterial attachArray="material" map={faceLeft} />
+      <meshStandardMaterial attachArray="material" map={faceTop} />
+
+      <meshStandardMaterial attachArray="material" color={"red"} />
       <meshStandardMaterial attachArray="material" map={faceInner} />
       <meshStandardMaterial attachArray="material" map={faceBack} />
-      <meshStandardMaterial attachArray="material" map={faceTop} />
-      <meshStandardMaterial attachArray="material" color={"red"} />
-      <meshStandardMaterial attachArray="material" map={faceLeft} />
-      <meshStandardMaterial attachArray="material" map={faceRight} />
     </mesh>
   );
 };
