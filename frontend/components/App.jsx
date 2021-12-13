@@ -1,10 +1,12 @@
 import React from "react";
+import Cube from "./Cube";
 
 const App = () => {
   return (
-    <div id="root">
+    <>
       <h1>Bryce Champaign</h1>
-    </div>
+      <Cube />
+    </>
   );
 };
 
