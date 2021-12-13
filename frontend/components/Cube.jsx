@@ -17,6 +17,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 extend({ OrbitControls });
 
 const CameraControls = () => {
+  // TODO: Disable zoom and panning functionality. Users should only be able to rotate.
   const {
     camera,
     gl: { domElement },
@@ -26,7 +27,13 @@ const CameraControls = () => {
   const controls = useRef();
   useFrame((state) => controls.current.update());
 
-  return <orbitControls ref={controls} args={[camera, domElement]} />;
+  return (
+    <orbitControls
+      ref={controls}
+      args={[camera, domElement]}
+      enableZoom={false}
+    />
+  );
 };
 
 const Cube = ({ isClickingDown }) => {
@@ -35,7 +42,7 @@ const Cube = ({ isClickingDown }) => {
 
   // Subscribe this component to the render-loop, rotate the mesh every frame
   useFrame((state, delta) => {
-    return (ref.current.rotation.y += isClickingDown ? 0 : 0.01);
+    return (ref.current.rotation.y += isClickingDown ? 0 : 0.005);
   });
 
   const faceInner = useLoader(TextureLoader, faceInnerReference);
