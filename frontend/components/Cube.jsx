@@ -38,7 +38,7 @@ const CameraControls = () => {
 };
 
 const CubePlaceholder = () => (
-  <mesh ref={ref} scale={3}>
+  <mesh scale={3}>
     <boxGeometry args={[1, 1, 1]} />
     <meshStandardMaterial attach="material" color="white" />
   </mesh>
@@ -84,7 +84,7 @@ const CubeCanvas = () => {
       <Canvas>
         <CameraControls />
         <ambientLight intensity={0.5} />
-        <Suspense fallback={CubePlaceholder}>
+        <Suspense fallback={<CubePlaceholder />}>
           <Cube isClickingDown={isClickingDown} />
         </Suspense>
       </Canvas>
