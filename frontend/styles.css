@@ -28,12 +28,13 @@ body {
 
 #name {
   margin-bottom: 0;
+  font-size: 4vw;
 }
 
 h1 {
   color: var(--light-primary);
   text-align: center;
-  font-size: 5vw;
+  font-size: 3vw;
 }
 
 p,

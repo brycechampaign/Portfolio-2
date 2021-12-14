@@ -11,7 +11,18 @@ const WIP = () => {
     setInterval(() => setColor(getRandomColor()), 400);
   }, []);
 
-  return <h1 style={{ color }}>!UNDER CONSTRUCTION!</h1>;
+  return (
+    <div
+      style={{
+        borderWidth: "2px 0 2px 0",
+        borderStyle: "dashed",
+        borderColor: color,
+        width: "100%",
+      }}
+    >
+      <h1 style={{ color }}>!UNDER CONSTRUCTION!</h1>
+    </div>
+  );
 };
 
 export default WIP;
