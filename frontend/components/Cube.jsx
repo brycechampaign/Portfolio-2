@@ -32,9 +32,17 @@ const CameraControls = () => {
       ref={controls}
       args={[camera, domElement]}
       enableZoom={false}
+      enablePan={false}
     />
   );
 };
+
+const CubePlaceholder = () => (
+  <mesh ref={ref} scale={3}>
+    <boxGeometry args={[1, 1, 1]} />
+    <meshStandardMaterial attach="material" color="white" />
+  </mesh>
+);
 
 const Cube = ({ isClickingDown }) => {
   // This reference gives us direct access to the THREE.Mesh object
@@ -76,7 +84,7 @@ const CubeCanvas = () => {
       <Canvas>
         <CameraControls />
         <ambientLight intensity={0.5} />
-        <Suspense fallback={null}>
+        <Suspense fallback={CubePlaceholder}>
           <Cube isClickingDown={isClickingDown} />
         </Suspense>
       </Canvas>
