@@ -20,7 +20,15 @@ const WIP = () => {
         width: "100%",
       }}
     >
-      <h1 style={{ color }}>!UNDER CONSTRUCTION!</h1>
+      <div
+        className="marquee"
+        style={{
+          display: "flex",
+          justifyContent: "space-evenly",
+        }}
+      >
+        <h1 style={{ color }}>!UNDER CONSTRUCTION!</h1>
+      </div>
     </div>
   );
 };

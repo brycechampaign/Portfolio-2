@@ -22,13 +22,17 @@ body {
   background-color: #1e1e1e;
   font-family: "Source Code Pro", monospace;
   margin: 0 auto;
-  font-size: 1em;
+  font-size: 16px;
   height: 100vh;
 }
 
 #name {
   margin-bottom: 0;
   font-size: 4vw;
+}
+
+#romaji {
+  font-size: 2.5vw;
 }
 
 h1 {
@@ -60,16 +64,37 @@ h2 {
   transition: all 0.2s ease-in-out;
   animation: grow-animation 2s linear infinite;
 }
-
 @keyframes grow-animation {
   0% {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.5);
+    transform: scale(1.4);
   }
   100% {
     transform: scale(1);
+  }
+}
+
+.marquee {
+  width: "100%";
+  line-height: 50px;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.marquee h1 {
+  display: inline-block;
+  padding-right: 100%;
+  animation: marquee 15s linear infinite;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
   }
 }
 
