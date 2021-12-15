@@ -5,6 +5,8 @@
   --light-secondary: #bed6ff;
   --dark-primary: #313131;
   --dark-secondary: #2a2a2a;
+  --value: #dcdcaa;
+  --white: #fff;
   --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   --project-width: 55rem;
 }
@@ -26,8 +28,9 @@ body {
   background-color: #1e1e1e;
   font-family: "Source Code Pro", monospace;
   margin: 0;
-  font-size: 16px;
+  font-size: 20px;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 #name {
@@ -35,8 +38,20 @@ body {
   font-size: 5vmin;
 }
 
+@media only screen and (max-width: 768px) {
+  #name {
+    font-size: 19px;
+  }
+}
+
 #romaji {
   font-size: 2.5vw;
+}
+
+@media only screen and (max-width: 768px) {
+  #romaji {
+    font-size: 15px;
+  }
 }
 
 h1 {
@@ -50,9 +65,19 @@ h2 {
   color: var(--light-secondary);
 }
 
-h2 {
-  font-size: 3vmin;
+@media only screen and (max-width: 768px) {
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 16px;
+  }
 }
+
+/* h2 {
+  font-size: 3vmin;
+} */
 
 .cube-scene {
   width: 100%;
@@ -64,7 +89,7 @@ h2 {
   margin-bottom: 0;
 }
 
-.tag {
+.keyword {
   color: var(--light-primary);
 }
 
@@ -85,21 +110,19 @@ h2 {
 }
 
 .marquee {
-  width: "100%";
+  width: 100vw;
   line-height: 50px;
   color: white;
   white-space: nowrap;
   overflow: hidden;
-  box-sizing: border-box;
 }
 .marquee h1 {
   display: inline-block;
-  padding-right: 100%;
-  animation: marquee 15s linear infinite;
+  animation: marquee 5s linear infinite;
 }
 @keyframes marquee {
   0% {
-    transform: translateX(0);
+    transform: translateX(-100%);
   }
   100% {
     transform: translateX(100%);
@@ -108,12 +131,23 @@ h2 {
 
 #name-subtitle {
   text-align: center;
+  font-size: 3vmin;
 }
 
 .section-container {
-  padding: 0 5% 0 5%;
+  padding: 5% 10% 5% 10%;
 }
 
-.section-container h2 {
-  text-align: center;
+@media only screen and (max-width: 768px) {
+  .section-container {
+    padding: 5%;
+  }
+}
+
+.white {
+  color: var(--white);
+}
+
+.value {
+  color: var(--value);
 }
