@@ -43,14 +43,6 @@ const App = () => {
             />
           </a>
           ,{" "}
-          <a href="https://twitter.com/ChampaignBryce" target="_blank">
-            <FontAwesomeIcon
-              icon={faTwitterSquare}
-              size="lg"
-              className="social-icon"
-            />
-          </a>
-          ,{" "}
           <a href="https://www.instagram.com/bryce_champaign/" target="_blank">
             <FontAwesomeIcon
               icon={faInstagramSquare}
