@@ -1,13 +1,11 @@
 import React from "react";
 import AboutMe from "./AboutMe";
-import Cube from "./Cube";
 import Skills from "./Skills";
 import WIP from "./WIP";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithubSquare,
   faLinkedin,
-  faTwitterSquare,
   faInstagramSquare,
 } from "@fortawesome/free-brands-svg-icons";
 
@@ -53,7 +51,6 @@ const App = () => {
           ]
         </p>
       </div>
-      <Cube />
       <WIP />
       <AboutMe />
     </>
